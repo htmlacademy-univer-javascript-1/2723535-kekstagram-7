@@ -63,14 +63,14 @@ const createComments = (startId) => {
 const createDescription = (id) => `Фотография №${id}`;
 
 const createPhotos = () => {
-  const photos = [];
+  const photosList = [];
   let commentId = 1;
 
   for (let i = 1; i <= PHOTOS_COUNT; i++) {
     const comments = createComments(commentId);
     commentId += comments.length;
 
-    photos.push({
+    photosList.push({
       id: i,
       url: `photos/${i}.jpg`,
       description: createDescription(i),
@@ -79,9 +79,9 @@ const createPhotos = () => {
     });
   }
 
-  return photos;
+  return photosList;
 };
 
 const photos = createPhotos();
 
-console.log(photos);
+export { photos };
