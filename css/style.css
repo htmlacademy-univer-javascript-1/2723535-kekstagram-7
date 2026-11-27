@@ -553,6 +553,59 @@ main {
   display: none;
 }
 
+/* Слайдер уровня эффекта внутри полосы */
+
+.effect-level {
+  padding: 0;
+}
+
+.effect-level__slider {
+  position: absolute;
+  top: 0;
+  right: 14px;
+  bottom: 0;
+  left: 14px;
+
+  height: auto;
+
+  background-color: transparent;
+  border: none;
+  border-radius: 33px;
+  box-shadow: none;
+}
+
+.effect-level__slider .noUi-connects {
+  border-radius: 33px;
+}
+
+.effect-level__slider .noUi-connect {
+  background-color: #00d1b2;
+}
+
+.effect-level__slider .noUi-handle {
+  top: 5px;
+  right: -11px;
+
+  width: 22px;
+  height: 22px;
+
+  background-color: #ffffff;
+  border: 2px solid #00d1b2;
+  border-radius: 50%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+.effect-level__slider .noUi-handle::before,
+.effect-level__slider .noUi-handle::after {
+  display: none;
+}
+
+.effect-level__slider .noUi-active {
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+}
+
 
 /**
  * Блок с эффектами, которые можно применить к изображению
