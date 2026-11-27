@@ -1,3 +1,5 @@
+import { resetImageEditor } from './image-editor.js';
+
 const uploadForm = document.querySelector('.img-upload__form');
 const uploadOverlay = document.querySelector('.img-upload__overlay');
 const uploadInput = document.querySelector('.img-upload__input');
@@ -63,6 +65,7 @@ pristine.addValidator(
 const openUploadForm = () => {
   uploadOverlay.classList.remove('hidden');
   document.body.classList.add('modal-open');
+  resetImageEditor();
 };
 
 const closeUploadForm = () => {
@@ -71,6 +74,7 @@ const closeUploadForm = () => {
   uploadForm.reset();
   uploadInput.value = '';
   pristine.reset();
+  resetImageEditor();
 };
 
 const isUploadFormOpened = () => !uploadOverlay.classList.contains('hidden');
